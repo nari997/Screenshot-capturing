@@ -1,0 +1,16 @@
+from fastapi import FastAPI, BackgroundTasks
+import requests
+from bs4 import BeautifulSoup
+import validators
+from sqlalchemy import create_engine, Column, Integer, String
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
+from PIL import Image
+import io
+import csv
+import time
