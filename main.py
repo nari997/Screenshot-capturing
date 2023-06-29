@@ -100,17 +100,17 @@ def capture_screenshots():
             try:
                 # Navigate to the webpages of the stored URLs
                 driver.get(url)
-                width = 1920
+                width = driver.execute_script("return document.body.scrollWidth")
                 # Setting height of the webpage to capture fully
                 height = driver.execute_script("return Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);")
-
                 driver.set_window_size(width,height)
-                page_body = driver.find_element(By.TAG_NAME, "body")
+                # page_body = driver.find_element(By.TAG_NAME, "body")
 
 
                 # Saving the screenshots
                 filename = f"E:\Vijay\Python_exps\Screenshot\Screenshots\screenshot_{index}.png" # To be saved folder
-                page_body.screenshot(filename) # defining file name
+                driver.save_screenshot(filename)
+                # page_body.screenshot(filename) # defining file name
                 print(f"Screenshot captured for URL:{url} - Saved as: {filename}") # printing output progress
 
             except Exception as e:
