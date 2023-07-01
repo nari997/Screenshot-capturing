@@ -1,5 +1,7 @@
 from fastapi import FastAPI, BackgroundTasks
 import requests
+import tkinter as tk
+from tkinter import ttk
 from bs4 import BeautifulSoup
 import validators
 from sqlalchemy import create_engine, Column, Integer, String
@@ -10,7 +12,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
-from PIL import Image
+from PIL import Image, ImageTK
+from fastapi.responses import FileResponse
 import io
 import csv
 import time
