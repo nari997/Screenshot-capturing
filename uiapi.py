@@ -18,6 +18,7 @@ def capture_screenshot(url):
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument("--headless")
     driver = webdriver.Chrome(options=chrome_options)
+    chrome_options.binary_location = '/usr/bin/google-chrome-stable'
     driver.get(url)
     time.sleep(2)  # Wait for the webpage to load
     
