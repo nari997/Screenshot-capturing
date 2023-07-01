@@ -4,7 +4,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
-from PIL import Image, ImageTk
+from PIL import Image
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from io import BytesIO
